@@ -61,3 +61,6 @@ Aplicado al ejemplo anterior la tabla materia se independiza y se relaciona con 
 De esta manera, aunque parezca que la información se multiplicó, en realidad la descompusimos o normalizamos de manera que a un sistema le sea fácil de reconocer y mantener la consistencia de los datos.
 
 Algunos autores precisan una 5FN que hace referencia a que después de realizar esta normalización a través de uniones (JOIN) permita regresar a la data original de la cual partió.
+<p align="center"><img src="https://i.ibb.co/6DyPVqk/img045.jpg" width="400" height="700"></p>
+<p align="center"><img src="https://i.ibb.co/VHZZnLT/img046.jpg" width="400" height="700"></p>
+<p align="center"><img src="https://i.ibb.co/Zf8cmgf/img047.jpg" width="400" height="700"></p>
