@@ -64,3 +64,6 @@ Algunos autores precisan una 5FN que hace referencia a que después de realizar 
 <p align="center"><img src="https://i.ibb.co/6DyPVqk/img045.jpg" width="400" height="700"></p>
 <p align="center"><img src="https://i.ibb.co/VHZZnLT/img046.jpg" width="400" height="700"></p>
 <p align="center"><img src="https://i.ibb.co/Zf8cmgf/img047.jpg" width="400" height="700"></p>
+
+##Rastrear cambios en una base de datos
+https://www.sqlshack.com/es/como-rastrear-el-historial-de-cambios-de-datos-usando-tablas-temporales-con-versiones-del-sistema-en-sql-server-2016/
