@@ -1,4 +1,14 @@
 ## Curso SQL Y Mysql
+### como hacer una base de datos
+- 1.-Se mira el problema a solucionar
+- 2.-Encontramos entidades ejemplo:carro = rectangulos
+- 2.1 atributos ejempl:color = redondeadod
+- 2.2 relaciones = rombo
+- 2.3 sub atributos = redondeados pequeños
+- 2.4 identificamod ID Y FK = subrayamos
+- 3. cardinalidades 1 a 1 1 a * o * a **
+- 4.- Normalizamos 5FN
+- 5..-Diagrama relacional
 <p align="center"><img src="https://i.ibb.co/93jMYBv/img041.jpg" width="700" height="400"></p>
 <p align="center"><img src="https://i.ibb.co/JrSFQbL/img042.jpg" width="400" height="700"></p>
 <p align="center"  ><img src="https://i.ibb.co/4sK67Nw/img043.jpg" width="400" height="700" ></p>
