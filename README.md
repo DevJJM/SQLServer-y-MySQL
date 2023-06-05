@@ -143,3 +143,39 @@ bulkadmin: Este rol permite a los usuarios realizar operaciones de importación 
 - setupadmin: Este rol permite a los usuarios administrar instalaciones y desinstalaciones de SQL Server.
 
 - sysadmin: El rol sysadmin es el rol de administrador del sistema más alto en SQL Server. Los usuarios con este rol tienen todos los permisos en el servidor y en todas las bases de datos.
+## CREANDO BASE DE DATOS
+create database blog = creando base de datos llamado blog
+drop data base = eliminado base de datos
+
+use master; = utilizando la base de datos
+
+### creando otra forma base de datos con el tamaño expesifico
+  
+    create database sales
+    on
+    ( name = sales_dat,
+      filename = 'c:\Program Files\.....\salesdata.mdf',
+    size = 10mb,
+    maxsize = 50mb,
+    filegrowth = 5mb,
+    )
+    log on
+    ( name = sales_log,
+      filename = 'c:\Program Files\.....\salesdata.ldf',
+    size = 5mb,
+    maxsize = 25mb,
+    filegrowth = 5mb,
+    );
+    go
+  
+- puede ser: kg, mb,gb,tb
+- filename = en que directrio se va a guardar la base de datos
+- size:en que tamaño de alamacenamiento va a comenzar
+- maxsize:hasta que tamaño de almacenamiento se va a aguardar
+- filegrowth: de cuanto en cuanto se va incrementar
+- MDF: MDF significa "Main Database File" o "Archivo Principal de la Base de Datos". Es el archivo principal de una base de datos en SQL Server y contiene la estructura de la base de datos, así como los datos y los objetos del esquema. El archivo MDF almacena las tablas, índices, procedimientos almacenados y otros objetos de la base de datos.
+
+- LDF: LDF significa "Log Database File" o "Archivo de Registro de la Base de Datos". Este archivo contiene el registro de todas las transacciones realizadas en la base de datos. El archivo LDF se utiliza para garantizar la integridad y la recuperabilidad de la base de datos en caso de fallos o errores. Almacena información secuencial sobre todas las transacciones realizadas, lo que permite recuperar la base de datos hasta el último punto de confirmación en caso de una falla del sistema.
+
+
+
