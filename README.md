@@ -77,3 +77,69 @@ Algunos autores precisan una 5FN que hace referencia a que después de realizar 
 
 ##Rastrear cambios en una base de datos
 https://www.sqlshack.com/es/como-rastrear-el-historial-de-cambios-de-datos-usando-tablas-temporales-con-versiones-del-sistema-en-sql-server-2016/
+## MODOS DE AUTENTIFICACION
+### Primero vemos que usuarios tenemos:
+1.- Nos vamos a la carpeta databases
+2.- a la carpeta login
+- Por defecto ya nos viene el login sa
+peor nos viene desabilitado
+- lo habilitamos
+-- creamos un query 
+ejecutamos el siguiente codigo para habilitar:
+alter login sa enable
+ejecutamos el siguiente codigo para desabilitar:
+
+### habilitar los dos metodos de autentificacion
+- exiten dos tipos por windows y por usuario y contraseña
+- clic derecho en desktop...
+- propiedades
+- seguridad
+- en autentificacion de servidor
+- clic en windows y modo de autentificacion
+
+### cambiando contraseña de autentificacion
+alter login sa with password ='123456'
+## CREACION DE LOGINS
+### creando usuario de windows
+- vemos como se llama nuestra pc: DESKTOP-ESOS2R4
+- luego ejecutamos el siguiente codigo:
+CREATE LOGIN [DESKTOP-ESOS2R4\Jacob] FROM WINDOWS WITH DEFAULT_DATABASE=master, DEFAULT_LANGUAGE=[español]
+### creando usuario de autentificaion
+CREATE LOGIN JONATHAN FROM WINDOWS WITH DEFAULT_DATABASE=master, DEFAULT_LANGUAGE=[español],
+default_language=[español], check_expiration=on
+- que dice el codigo creamos un usuario jonathan con paswword jonathan donde tiene que cambiar la contraseña para entrar y va estar por defecto en la 
+base de datos master y la expiracion de la contraseña esta activa
+## CREANDO LOGIN EN UNA BASE DE DATOS
+- creando un login para la base de datos
+- CREATE LOGIN JONATHAN WITH PASSWORD = 'JACOB', DEAFAULT_DATABASE=master,default_laguage=[español]
+## CREANDO USUARIOS EN UNA BASE DE DATOS
+- creando un usuario para ese login de arriba
+CREATE user juan for login jonathan with default_schema=dbo
+## ELIMINADO USUARIO 
+DROP USER juan
+## CREANDO BASE DE DATOS
+CREATA DATABASE TIENDA
+## USAR LA BASE DE DATOS
+USE TIENDA
+## QUE SE CONECTEN MULTIPLES USUARIOS A LA BASE DE DATOS
+ALTER DATABASE tienda SET MILTI_USER
+
+##DAR PRIVILEGIOS A LOS USUARIOS
+- le damos privilegio de crear base de datos a un login: grant create any database to jonathan
+bulkadmin: Este rol permite a los usuarios realizar operaciones de importación y exportación masivas de datos mediante el uso de las instrucciones BULK INSERT y OPENROWSET(BULK...).
+
+- dbcreator: Los usuarios con este rol tienen permiso para crear, alterar, eliminar y restaurar bases de datos.
+
+- diskadmin: Este rol permite a los usuarios administrar archivos de datos y registros de transacciones, así como realizar tareas de copia de seguridad y restauración.
+
+- processadmin: Los usuarios con este rol pueden ver y matar los procesos de SQL Server que se están ejecutando en el sistema.
+
+- public: El rol público es un rol especial que contiene todos los usuarios de una base de datos. Todos los usuarios son miembros implícitos del rol público y tienen los permisos asignados a este rol de manera predeterminada.
+
+- securityadmin: Este rol proporciona a los usuarios el control sobre la administración de inicios de sesión, usuarios y roles de servidor.
+
+- serveradmin: Los usuarios con este rol tienen permisos administrativos de nivel superior en todo el servidor. Pueden cambiar la configuración del servidor y realizar otras tareas administrativas.
+
+- setupadmin: Este rol permite a los usuarios administrar instalaciones y desinstalaciones de SQL Server.
+
+- sysadmin: El rol sysadmin es el rol de administrador del sistema más alto en SQL Server. Los usuarios con este rol tienen todos los permisos en el servidor y en todas las bases de datos.
