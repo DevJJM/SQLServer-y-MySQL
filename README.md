@@ -177,5 +177,12 @@ use master; = utilizando la base de datos
 
 - LDF: LDF significa "Log Database File" o "Archivo de Registro de la Base de Datos". Este archivo contiene el registro de todas las transacciones realizadas en la base de datos. El archivo LDF se utiliza para garantizar la integridad y la recuperabilidad de la base de datos en caso de fallos o errores. Almacena información secuencial sobre todas las transacciones realizadas, lo que permite recuperar la base de datos hasta el último punto de confirmación en caso de una falla del sistema.
 
+## CREAR LAS COLUMNAS, ACTUALIZAR Y ELIMINAR  LAS COLUMNAS  
+- ALTER TABLE venta.dbo.datos
+- DROP COLUMN ciudad;
 
+- alter table venta.dbo.datos
+- add ciudad varchar(50);
+### VISUALIZAMOS LOS DATOS YA ACTUALIZADOS
+- select * from datos
 
