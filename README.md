@@ -202,3 +202,21 @@ genero varchar(30)
 - 2.- DROP: El comando DROP se utiliza para eliminar objetos de la base de datos, como tablas, vistas, procedimientos almacenados, etc. Cuando se ejecuta DROP en una tabla, se eliminan tanto los datos como la definición de la tabla. Por ejemplo:
 
   - DROP TABLE NombreTabla;
+## CREANDO TABLAS
+create table clientes(
+id int ,
+nombres nvarchar(50),
+apellidos nvarchar(20),
+estatura decimal(3,2),
+sexo char(1),
+dni char(10)
+
+);
+select * from clientes
+## ALTERAR TABLAS
+- agregar, quitar, renombrar columna y quitar tipo de dato
+- alter table clientes add  direccion nvarchar(100)
+## INSERTAR REGISTROS
+- insertar a las tablas datos
+- insert into empleados(id, nombres, apellidos, direccion, fecha de nacimiento)
+- values (2,'jonathan', ' jacob','psje','11-09-1999')
