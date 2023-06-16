@@ -195,4 +195,10 @@ create table genero(
 id integer primary key,
 genero varchar(30)
 );
+## CUANDO UTILIZAR DELETE Y DROP 
+1.- DELETE: El comando DELETE se utiliza para eliminar filas específicas de una tabla en una base de datos. Puedes utilizar una cláusula WHERE para especificar las condiciones que determinarán qué filas deben ser eliminadas. Por ejemplo:
 
+  - DELETE FROM NombreTabla WHERE Condicion;
+2.- DROP: El comando DROP se utiliza para eliminar objetos de la base de datos, como tablas, vistas, procedimientos almacenados, etc. Cuando se ejecuta DROP en una tabla, se eliminan tanto los datos como la definición de la tabla. Por ejemplo:
+
+  - DROP TABLE NombreTabla;
