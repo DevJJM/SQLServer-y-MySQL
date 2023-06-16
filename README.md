@@ -190,3 +190,9 @@ use master; = utilizando la base de datos
 - select COUNT(*) as sexo
 - from datos
 - Vemos que utilizamos la opcion contar donde la columna es sexo y son extraidos de la tabla datos
+### CREANDO TABLA
+create table genero(
+id integer primary key,
+genero varchar(30)
+);
+
