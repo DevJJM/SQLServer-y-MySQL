@@ -225,3 +225,16 @@ select * from clientes
 - select * from tblEmpleado
 - update tblEmpleado set empApellidoPaterno ='Jacobe' where IDEmpleado='1'
 - update tblEmpleado set empNumSegSocial = '75171766' where IDEmpleado='1'
+## ELIMAR REGISTROS
+- comando delete
+- delete from tblEmpleado where IDEmpleado= 9
+
+### HASTA AQUI EMOS HECHO CRUD CREATE - INSERT READ - SELECT UPDATE - UPDATE DELETE - DELETE
+## BUSQUEDA / SELECCION DE REGISTROS
+- comando select
+- si queremos que nos traiga todos utilizamos el *
+  - select * from tblEmpleado
+- si queremo que solo nos traiga algunas cosas o damos asi
+  - select IDEmpleado, empNumSegSocial, empApellidoPaterno from tblEmpleado
+- si queremos agregar mas especificos
+  - select IDEmpleado, empNumSegSocial from tblEmpleado where empNumSegSocial='75171766'
