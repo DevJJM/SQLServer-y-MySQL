@@ -238,3 +238,13 @@ select * from clientes
   - select IDEmpleado, empNumSegSocial, empApellidoPaterno from tblEmpleado
 - si queremos agregar mas especificos
   - select IDEmpleado, empNumSegSocial from tblEmpleado where empNumSegSocial='75171766'
+## LLAVES PRIMARIAS
+- create table usuarios(
+- id int
+- Nombre varchar(50),
+- COSTRAINT id PRIMARY KEY(id,nombre) 
+- );
+- tambien alterar las tablas donde no cuentan con id
+- alter table usuarios add constraint id primary key(id)
+- eliminar los id
+- alter table usuarios drop constraint id
