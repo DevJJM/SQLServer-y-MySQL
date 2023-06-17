@@ -220,3 +220,8 @@ select * from clientes
 - insertar a las tablas datos
 - insert into empleados(id, nombres, apellidos, direccion, fecha de nacimiento)
 - values (2,'jonathan', ' jacob','psje','11-09-1999')
+## ACTUALIZAR REGISTROS
+- comando update
+- select * from tblEmpleado
+- update tblEmpleado set empApellidoPaterno ='Jacobe' where IDEmpleado='1'
+- update tblEmpleado set empNumSegSocial = '75171766' where IDEmpleado='1'
