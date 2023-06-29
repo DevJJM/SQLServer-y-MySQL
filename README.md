@@ -248,3 +248,19 @@ select * from clientes
 - alter table usuarios add constraint id primary key(id)
 - eliminar los id
 - alter table usuarios drop constraint id
+## TABLA TEMPORAL
+- Es una tabla que se crea en un determinado tiempo y luego deja de existir
+- creando una tabla temporal:
+-    use venta
+-  create table #usuario(
+-  	id_usuario int primary key identity,
+-  	nombre varchar(10)
+-  );
+-  insert into #usuario(nombre) 
+-  values
+-  ('jonathan')
+-  select * from #usuario
+- si abrimos otro query o queremos hacer otra consulta ya no lo vamos a ver
+## PROCESOS O PROCEDIMIENTOS ALMACENADOS
+- los procedimientos almacenados de SQL sirven para encapsular y ejecutar lógica de negocio en una base de datos, proporcionando reutilización de código, mejor rendimiento, seguridad, modularidad y soporte para transacciones.
+- 
