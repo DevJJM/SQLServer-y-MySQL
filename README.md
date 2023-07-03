@@ -263,4 +263,15 @@ select * from clientes
 - si abrimos otro query o queremos hacer otra consulta ya no lo vamos a ver
 ## PROCESOS O PROCEDIMIENTOS ALMACENADOS
 - los procedimientos almacenados de SQL sirven para encapsular y ejecutar lógica de negocio en una base de datos, proporcionando reutilización de código, mejor rendimiento, seguridad, modularidad y soporte para transacciones.
-- 
+
+## UTILIZANDO DISTINCT 
+- utilizando distinct para que nos devuelva valores unicos
+
+## UTILIZANDO MOD
+- utilizamod mod(identificador, divisor)
+- mod(id,2)
+- lo utilizamos si es divisible y saber si es par
+## UTILIZANDO COUNT
+- Utilizando count para contar el total y luego restar
+- SELECT COUNT(*) - COUNT(DISTINCT CITY) AS Diferencia
+- FROM STATION;
