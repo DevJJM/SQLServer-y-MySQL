@@ -275,3 +275,9 @@ select * from clientes
 - Utilizando count para contar el total y luego restar
 - SELECT COUNT(*) - COUNT(DISTINCT CITY) AS Diferencia
 - FROM STATION;
+## UTILIZANDO LIKE Y OR
+- consulta en SQL para obtener la lista de nombres de ciudades que terminen a,e,i,o,u
+- SELECT DISTINCT CITY
+- FROM STATION
+- WHERE CITY LIKE '%a' OR CITY LIKE '%e' OR CITY LIKE '%i' OR CITY LIKE '%o' OR CITY LIKE '%u';
+- 
