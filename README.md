@@ -289,3 +289,10 @@ select * from clientes
 - FROM STATION
 - WHERE SUBSTRING(CITY, 1, 1) IN ('a', 'e', 'i', 'o', 'u')
 -  AND SUBSTRING(CITY, -1) IN ('a', 'e', 'i', 'o', 'u');
+## UTILIZANDO HAVIG PARA EL FILTRADO DE GRUPOS
+- En SQL Server, la cláusula "HAVING" se utiliza junto con la cláusula "GROUP BY" para filtrar los resultados de una consulta basándose en condiciones aplicadas a los grupos resultantes.
+- SELECT Producto, SUM(Total) AS TotalVentas
+- FROM Ventas
+- GROUP BY Producto
+- HAVING SUM(Total) > 1000;
+- En este ejemplo, la cláusula "GROUP BY" agrupa las filas por el campo "Producto" y la función de agregación "SUM" calcula el total de ventas para cada producto. Luego, la cláusula "HAVING" filtra los grupos y muestra solo aquellos cuyo total de ventas es superior a 1000.
