@@ -280,4 +280,12 @@ select * from clientes
 - SELECT DISTINCT CITY
 - FROM STATION
 - WHERE CITY LIKE '%a' OR CITY LIKE '%e' OR CITY LIKE '%i' OR CITY LIKE '%o' OR CITY LIKE '%u';
-- 
+
+## UTILIZANDO SUBSTRINC WHERE AND Y IN
+- Consulte la lista de nombres de CIUDAD de ESTACIÓN que tienen vocales (es decir, a, e, i, o y u) como primer y último carácter. Su resultado no puede contener duplicados.
+-  SUBSTRING para extraer el primer carácter
+- IN Comparamos estos caracteres con la lista de vocales utilizando el operador
+- SELECT DISTINCT CITY
+- FROM STATION
+- WHERE SUBSTRING(CITY, 1, 1) IN ('a', 'e', 'i', 'o', 'u')
+-  AND SUBSTRING(CITY, -1) IN ('a', 'e', 'i', 'o', 'u');
