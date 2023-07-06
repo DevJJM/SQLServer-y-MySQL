@@ -296,3 +296,120 @@ select * from clientes
 - GROUP BY Producto
 - HAVING SUM(Total) > 1000;
 - En este ejemplo, la cláusula "GROUP BY" agrupa las filas por el campo "Producto" y la función de agregación "SUM" calcula el total de ventas para cada producto. Luego, la cláusula "HAVING" filtra los grupos y muestra solo aquellos cuyo total de ventas es superior a 1000.
+
+## CONEXION SQL SERVER CON PYTHON
+ ```py
+  
+  import pyodbc
+
+try:
+    connection = pyodbc.connect('DRIVER={SQL Server};SERVER=DESKTOP-I3FD54E;DATABASE=venta;UID=sa;PWD=jacob')
+    # connection = pyodbc.connect('DRIVER={SQL Server};SERVER=USKOKRUM2010;DATABASE=django_api;Trusted_Connection=yes;')
+    print("Conexión exitosa.")
+    cursor = connection.cursor()
+    cursor.execute("SELECT @@version;")
+    row = cursor.fetchone()
+    print("Versión del servidor de SQL Server: {}".format(row))
+    cursor.execute("SELECT * FROM empleado")
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
+except Exception as ex:
+    print("Error durante la conexión: {}".format(ex))
+finally:
+    connection.close()  # Se cerró la conexión a la BD.
+    print("La conexión ha finalizado.")
+  
+ ```
+## CONEXION MYSQL CON PYTHON
+ ```py
+ import mysql.connector
+from mysql.connector import Error
+
+try:
+    connection = mysql.connector.connect(
+        host='localhost',
+        port=3306,
+        user='root',
+        password='123456',
+        db='django_api'
+    )
+
+    if connection.is_connected():
+        print("Conexión exitosa.")
+        infoServer = connection.get_server_info()
+        print("Info del servidor: {}".format(infoServer))
+        cursor = connection.cursor()
+        cursor.execute("SELECT DATABASE()")
+        row = cursor.fetchone()
+        print("Conectado a la base de datos: {}".format(row))
+except Error as ex:
+    print("Error durante la conexión: {}".format(ex))
+finally:
+    if connection.is_connected():
+        connection.close()  # Se cerró la conexión a la BD.
+        print("La conexión ha finalizado.")
+  
+ ```
+## CONEXION ORACLE CON PYTHON
+```py
+import cx_Oracle
+
+"""
+Si tienes problemas con tu base de datos en Oracle:
+
+SQLPLUS / AS SYSDBA
+Abrir conexión => ALTER PLUGGABLE DATABASE XEPDB1 OPEN;
+"""
+
+try:
+    connection = cx_Oracle.connect(
+        user='USUARIO',
+        password='PASSWORD',
+        dsn='localhost:1521/XEPDB2',  # Data Source Name
+        encoding='UTF-8'
+    )
+    print(connection.version)
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM NOMBRE_TABLA")
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
+except Exception as ex:
+    print("Error durante la conexión: {}".format(ex))
+finally:
+    connection.close()  # Se cerró la conexión a la BD.
+    print("La conexión ha finalizado.")
+
+```
+
+## CONEXION POSTGRESQL CON PYTHON
+```py
+import psycopg2
+from psycopg2 import DatabaseError
+
+try:
+    connection = psycopg2.connect(
+        host='localhost',
+        user='postgres',
+        password='123456',
+        database='universidad'
+    )
+
+    print("Conexión exitosa.")
+    cursor = connection.cursor()
+    cursor.execute("SELECT version()")
+    row = cursor.fetchone()
+    print("Versión del servidor de PostgreSQL: {}".format(row))
+    cursor.execute("SELECT * FROM curso")
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
+except DatabaseError as ex:
+    print("Error durante la conexión: {}".format(ex))
+finally:
+    connection.close()  # Se cerró la conexión a la BD.
+    print("La conexión ha finalizado.")
+
+
+```
