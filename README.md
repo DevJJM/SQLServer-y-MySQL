@@ -413,3 +413,8 @@ finally:
 
 
 ```
+## CAMBIAR EL NOMBRE DE UNA TABLA 
+- Asi cambiamos de una tabla llamado empleado a una tabla empleados ya que debe ser plural
+- exec sp_rename 'dbo.empleado','dbo.empleados'
+-                 antiguo      ,   nuevo
+
