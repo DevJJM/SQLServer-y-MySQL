@@ -9,6 +9,7 @@
 - 3. cardinalidades 1 a 1 1 a * o * a **
 - 4.- Normalizamos 5FN
 - 5..-Diagrama relacional
+  - Enlace de como diseñar una base de datos ( https://jonmircha.com/bd) muy bueno
 <p align="center"><img src="https://i.ibb.co/93jMYBv/img041.jpg" width="700" height="400"></p>
 <p align="center"><img src="https://i.ibb.co/JrSFQbL/img042.jpg" width="400" height="700"></p>
 <p align="center"  ><img src="https://i.ibb.co/4sK67Nw/img043.jpg" width="400" height="700" ></p>
